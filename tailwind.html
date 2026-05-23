@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica Tailwind</title>
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <div class="max-w-md mx-auto mt-20 bg-white p-8 rounded-xl shadow">
+    <a href="index.html" class="text-sm text-gray-500 hover:text-gray-700">← Volver</a>
+
+    <h1 class="text-2xl font-bold text-blue-600 mt-2">Hola con Tailwind</h1>
+    <p class="text-gray-700 mt-2">Instituto Tecnológico Superior De Martínez De La Torre</p>
+    <p class="text-gray-600">Alumno: <strong>José Fernando Hernández Galindo</strong></p>
+
+    <div class="mt-4 space-x-2">
+      <button onclick="saludar()"
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+        Botón verde
+      </button>
+      <button onclick="limpiar()"
+              class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">
+        Botón rojo
+      </button>
+    </div>
+
+    <div id="mensaje" class="mt-6 p-4 bg-blue-100 text-blue-800 rounded">
+      Presiona un botón para ver qué pasa.
+    </div>
+  </div>
+
+  <script>
+    function saludar() {
+      const m = document.getElementById("mensaje");
+      m.innerHTML = "✅ ¡Hola José Fernando! Botón verde presionado.";
+      m.className = "mt-6 p-4 bg-green-100 text-green-800 rounded";
+    }
+
+    function limpiar() {
+      const m = document.getElementById("mensaje");
+      m.innerHTML = "❌ Botón rojo presionado, mensaje borrado.";
+      m.className = "mt-6 p-4 bg-red-100 text-red-800 rounded";
+    }
+  </script>
+
+</body>
+</html>
